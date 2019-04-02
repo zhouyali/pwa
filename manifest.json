@@ -1,0 +1,15 @@
+{
+    "name": "PWA demo",
+    "short_name": "PWA",
+    "display": "standalone",
+    "start_url": "/",
+    "theme_color": "#8888ff",
+    "background_color": "#aaaaff",
+    "icons": [
+      {
+        "src": "./logo.png",
+        "sizes": "70x70",
+        "type": "image/jpeg"
+      }
+    ]
+  }

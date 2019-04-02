@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Minimal PWA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="PWA">
+    <link rel="apple-touch-icon" href="./logo.png">
+</head>
+<body style="background:url('./bg.jpg') no-repeat top center;background-size: cover;color:slateblue">
+    <h2 style="margin:220px 0 -20px 0">PWA</h2>
+    <h3>Minimal PWA, open Console for more~~~</h3>
+</body>
+</html>
+<script src="./sw.js"></script>
+<script>
+    console.log('serviceWorker>>>>>>',navigator.serviceWorker)
+    if(window.navigator.serviceWorker !== null) {
+        navigator.serviceWorker.register('./sw.js').then((registration)=>{
+            console.log(registration)
+            console.log('Registered events at scope:',registration.scope)
+        })
+    }
+</script>
